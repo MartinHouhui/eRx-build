@@ -21,21 +21,21 @@
 ## 安装
 
 ```bash
-$ npm i atool-build --save
+$ npm i eRx-build --save
 ```
 
 ## 使用
 
 ```bash
-$ atool-build [options]
+$ eRx-build [options]
 ```
 
 ### 命令行参数
 
 ```bash
-$ atool-build -h
+$ eRx-build -h
   
-  Usage: atool-build [options]
+  Usage: eRx-build [options]
   
   Options:
   

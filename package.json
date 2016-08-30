@@ -1,6 +1,6 @@
 {
   "name": "eRx-build",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Build tool based on webpack",
   "repository": {
     "type": "git",
@@ -21,12 +21,8 @@
     "test": "babel-node $(npm bin)/babel-istanbul cover $(npm bin)/_mocha -- --no-timeouts",
     "debug": "$(npm bin)/mocha --require babel-core/register --no-timeouts",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "lint": "eslint --ext .js src",
     "pub": "npm run build && npm publish && rm -rf lib && git push origin"
   },
-  "pre-commit": [
-    "lint"
-  ],
   "dependencies": {
     "atool-monitor": "0.x",
     "autoprefixer": "^6.3.6",

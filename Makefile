@@ -4,6 +4,6 @@ publish:
 	npm publish
 
 publish-sync: publish
-	cnpm sync atool-build
-	tnpm sync atool-build
+	cnpm sync eRx-build
+	tnpm sync eRx-build
 
