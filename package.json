@@ -1,16 +1,16 @@
 {
-  "name": "atool-build",
-  "version": "0.8.0",
+  "name": "eRx-build",
+  "version": "0.1.0",
   "description": "Build tool based on webpack",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ant-tool/atool-build"
+    "url": "https://github.com/MartinHouhui/eRx-build"
   },
-  "homepage": "https://github.com/ant-tool/atool-build",
-  "author": "chencheng <sorrycc@gmail.com>",
+  "homepage": "https://github.com/MartinHouhui/eRx-build",
+  "author": "martinhou <robinshouhui@163.com>",
   "license": "MIT",
   "bin": {
-    "atool-build": "./bin/atool-build"
+    "eRx-build": "./bin/eRx-build"
   },
   "files": [
     "bin",
