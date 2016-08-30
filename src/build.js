@@ -2,7 +2,7 @@ import { join } from 'path';
 import { writeFileSync } from 'fs';
 import webpack, { ProgressPlugin } from 'webpack';
 import chalk from 'chalk';
-import getConfig from 'getConfig';
+import getConfig from './getConfig';
 
 export default function build(args, callback) {
   // Get config.
