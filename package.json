@@ -62,8 +62,7 @@
     "expect": "^1.16.0",
     "glob": "^7.0.3",
     "i18n-webpack-plugin": "^0.2.7",
-    "mocha": "^2.4.5",
-    "pre-commit": "~1.1.2"
+    "mocha": "^2.4.5"
   },
   "babel": {
     "presets": [
