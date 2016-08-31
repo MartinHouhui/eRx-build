@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+program
+  .version(require('../package').version, '-v, --version')
+  .option('-e, --entry <entry>', 'start entry')
+  .option('-p, --prot <prot>', 'dev server prot')
+  .option('-p, --prot <prot>', 'dev server prot')
+  .option('--proxyConfig <path>', 'proxy config path')
+  .parse(process.argv);
+
+program.cwd = process.cwd();
+
+require('../lib/server')(program);
+
+require('atool-monitor').emit();

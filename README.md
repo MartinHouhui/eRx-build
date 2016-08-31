@@ -12,7 +12,7 @@
 
 ## 特性
 
-- 基于 webpack 实现
+- 基于 atool-build 实现
 - 支持通过 `webpack.config.js` 进行扩展 webpack 的配置项
 - 支持 [stage-0](https://babeljs.io/docs/plugins/preset-stage-0), [es2015](https://babeljs.io/docs/plugins/preset-es2015), react 和 less
 - 支持 hash 模式的构建, 并生成映射表 `map.json`  
@@ -50,6 +50,20 @@ $ eRx-build -h
     --no-compress             build without compress 
 ```
 
+
+```bash
+$ eRx-server 
+  
+  Usage: eRx-server [options]
+  
+  Options:
+  
+   -e, --entry <entry>   start entry
+   -p, --prot <prot>     dev server prot
+   -p, --prot <prot>     dev server prot
+   --proxyConfig <path>  proxy config path
+```
+
 ### 配置扩展
 
 如果需要对内置的 webpack 配置进行修改, 可在项目根目录新建 `webpack.config.js` 进行扩展.
@@ -70,13 +84,3 @@ module.exports = function(webpackConfig) {
 - `webpackConfig` -- 默认配置, 修改后返回新的配置
 
 
-详细内容：[atool-build 基本使用](http://ant-tool.github.io/atool-build.html)
-
-
-## FAQ
-
-> 如何在 webpack.config.js 中引用 webpack ? (新增插件需要) 
-
-`var webpack = require('atool-build/lib/webpack');`
-
-[#32](https://github.com/ant-tool/atool-build/issues/32)
