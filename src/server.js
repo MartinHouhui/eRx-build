@@ -39,14 +39,14 @@ function getDevConfig(args) {
 
     let devStart = webpackConfig.entry[entry];
     if (typeof devStart === 'string') {
-        webpackConfig.entry = [
+        webpackConfig.entry[entry] = [
             `webpack-dev-server/client?http://localhost:${prot}/`,
             "webpack/hot/dev-server",
             devStart
         ]
     } else if (typeof devStart === 'array') {
         devStart.unshift(`webpack-dev-server/client?http://localhost:${prot}/`, "webpack/hot/dev-server");
-        webpackConfig.entry = devStart;
+        webpackConfig.entry[entry] = devStart;
     }
     return webpackConfig;
 }
