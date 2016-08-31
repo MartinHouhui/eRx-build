@@ -44,4 +44,8 @@ describe('lib/server', function () {
   it('should support entry', () => {
     return testServer({entry:'index'}, 'build-server-entry');
   });
+    it('should support proxy', () => {
+    return testServer({entry:'index'}, 'build-server-proxy');
+  });
+  
 });

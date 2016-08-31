@@ -10,7 +10,7 @@ export default function start(args, callback) {
 
 
     let proxy = {};
-    const proxyConfig = args.proxyConfig || 'proxy.config';
+    const proxyConfig = args.proxyConfig || 'proxy.config.js';
     let proxyConfigPath = resolve(args.cwd, proxyConfig);
     if (existsSync(proxyConfigPath)) {
         proxy = require(proxyConfigPath);
