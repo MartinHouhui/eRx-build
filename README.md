@@ -79,6 +79,19 @@ module.exports = function(webpackConfig) {
 };
 ```
 
+
+
+如果需要对内置的 dev server proxy 配置进行修改, 可在项目根目录新建 `proxy.config.js` 进行扩展.
+
+
+让 `proxy.config.js` 输出 `object`, 比如:
+
+```javascript
+module.exports = {
+    "*" : "http://localhost:1234" // <- backend
+  };
+```
+
 参数:
 
 - `webpackConfig` -- 默认配置, 修改后返回新的配置
