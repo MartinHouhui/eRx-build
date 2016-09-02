@@ -45,16 +45,7 @@ export default function getWebpackCommonConfig(args) {
     'tls',
   ];
 
-  const browser = pkg.browser || {};
-
-  const node = emptyBuildins.reduce((obj, name) => {
-    if (!(name in browser)) {
-      return { ...obj, ...{ [name]: 'empty' } };
-    }
-return obj;
-  }, { });
-
-
+let prot = args.prot || 8080;
 return {
 
   babel: babelQuery,
@@ -64,9 +55,9 @@ return {
   },
 
   output: {
-    path: join(process.cwd(), './dist/'),
+    path: join(args.cwd, './dist/'),
     filename: jsFileName,
-    publicPath: '/'
+    publicPath: `http://localhost:${prot}/`
   },
 
   devtool: args.devtool,
@@ -81,8 +72,6 @@ return {
   },
 
   entry: pkg.entry,
-
-  node,
 
   module: {
     noParse: [/moment.js/],

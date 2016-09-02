@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { resolve,join } from 'path';
 import { existsSync } from 'fs';
 import webpack from 'webpack';
 import chalk from 'chalk';
@@ -22,8 +22,7 @@ export default function start(args, callback) {
     var compiler = webpack(webpackConfig);
     var server = new webpackDevServer(compiler, {
         hot: true,
-        contentBase: './dist/',
-        publicPath: './',
+        publicPath: `http://localhost:${prot}/`,
         proxy
     });
     server.listen(prot);
