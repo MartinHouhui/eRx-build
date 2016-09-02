@@ -30,22 +30,26 @@ function testServer(args, fixture) {
       assert(outputPath, fixture);
       resolve();
     });
-  });
+});
 }
 
 describe('lib/server', function () {
   this.timeout(50000);
-  it('should build normally', () => {
-    return testServer({hash:true}, 'build-server-normal');
+  /*it('should build normally', () => {
+    return testServer({ hash: true }, 'build-server-normal');
   });
   it('should support port', () => {
-    return testServer({prot:1234}, 'build-server-port');
+    return testServer({ prot: 1234 }, 'build-server-port');
   });
   it('should support entry', () => {
-    return testServer({entry:'index'}, 'build-server-entry');
+    return testServer({ entry: 'index' }, 'build-server-entry');
   });
-    it('should support proxy', () => {
-    return testServer({entry:'index'}, 'build-server-proxy');
+  it('should support proxy', () => {
+    return testServer({ entry: 'index' }, 'build-server-proxy');
+  });*/
+
+  it('should support template', () => {
+    return testServer({ entry: 'index' }, 'build-server-template');
   });
-  
+
 });

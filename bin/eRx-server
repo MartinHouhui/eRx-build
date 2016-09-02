@@ -8,6 +8,7 @@ program
   .option('-p, --prot <prot>', 'dev server prot')
   .option('-p, --prot <prot>', 'dev server prot')
   .option('--proxyConfig <path>', 'proxy config path')
+  .option('--template <path>', 'template path')
   .parse(process.argv);
 
 program.cwd = process.cwd();
