@@ -1,6 +1,6 @@
 {
-  "name": "eRx-build",
-  "version": "0.2.2",
+  "name": "erx-build",
+  "version": "1.0.0",
   "description": "Build tool based on webpack",
   "repository": {
     "type": "git",
@@ -10,8 +10,8 @@
   "author": "martinhou <robinshouhui@163.com>",
   "license": "MIT",
   "bin": {
-    "eRx-build": "./bin/eRx-build",
-    "eRx-server": "./bin/eRx-server"
+    "eRx-build": "./bin/erx-build",
+    "eRx-server": "./bin/erx-server"
   },
   "files": [
     "bin",
