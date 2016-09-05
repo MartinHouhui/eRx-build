@@ -87,7 +87,7 @@ export default function getWebpackCommonConfig(args) {
         },
         {
           test: /\.tsx?$/,
-          loaders: ['babel', 'ts'],
+          loaders: ['react-hot', 'babel', 'ts'],
         },
         {
           test(filePath) {
